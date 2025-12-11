@@ -1,16 +1,95 @@
-# React + Vite
+# TanStack React Query Learning Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my learning project for [TanStack React Query](https://tanstack.com/query/latest) (formerly React Query), a powerful data fetching and state management library for React applications.
 
-Currently, two official plugins are available:
+## 📚 About This Project
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project demonstrates the fundamentals of TanStack React Query by building a simple application that fetches and displays posts from an API. It serves as a practical introduction to modern data fetching patterns in React.
 
-## React Compiler
+## ✨ Features Demonstrated
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Data Fetching**: Using `useQuery` hook to fetch data from an external API
+- **Loading States**: Handling loading states with `isLoading`
+- **Error Handling**: Managing errors with proper error states
+- **Query Keys**: Understanding query key management
+- **QueryClient Setup**: Configuring the QueryClientProvider
+- **Automatic Caching**: Leveraging React Query's built-in caching mechanisms
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19** - JavaScript library for building user interfaces
+- **Vite** - Next generation frontend tooling for fast development
+- **TanStack React Query v5** - Powerful data synchronization for React
+- **Tailwind CSS v4** - Utility-first CSS framework
+- **JSONPlaceholder API** - Free fake API for testing and prototyping
+
+## 📦 Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/nayem567/tanstack-react-query-1.git
+cd tanstack-react-query-1
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+pnpm install
+```
+
+## 🚀 Running the Project
+
+Start the development server:
+```bash
+npm run dev
+# or
+pnpm dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser to see the application.
+
+## 📖 What I Learned
+
+- How to set up TanStack React Query in a React application
+- The basics of the `useQuery` hook for data fetching
+- Managing loading and error states effectively
+- The importance of query keys for cache management
+- How React Query automatically handles caching and refetching
+
+## 🔧 Available Scripts
+
+- `npm run dev` - Start the development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview the production build
+- `npm run lint` - Run ESLint for code quality
+
+## 📝 Code Example
+
+Here's a simple example of using `useQuery`:
+
+```javascript
+const { data, isLoading, error } = useQuery({
+  queryKey: ["posts"],
+  queryFn: fetchPost,
+});
+```
+
+## 🌐 API Used
+
+This project uses [JSONPlaceholder](https://jsonplaceholder.typicode.com/) - a free fake REST API for testing and prototyping.
+
+## 📚 Resources
+
+- [TanStack Query Documentation](https://tanstack.com/query/latest)
+- [React Documentation](https://react.dev)
+- [Vite Documentation](https://vitejs.dev)
+- [Tailwind CSS Documentation](https://tailwindcss.com)
+
+## 📄 License
+
+This is a personal learning project and is open for anyone to learn from.
+
+---
+
+Built with ❤️ while learning TanStack React Query
